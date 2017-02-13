@@ -7,6 +7,8 @@
 // Allow users to click the images to see a larger version with more information.
 
 $(document).on('ready', function(){
+    //hide add images button on page load with ID hide
+    $('#hide').hide();
     // 1.   Accept a string value called `tags` as an argument.
     var searchImages = function(tags) {
         var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
@@ -42,6 +44,9 @@ $(document).on('ready', function(){
                 }).appendTo(newListItem);
                 newListItem.appendTo( "#images" );
 
+                //add a border to images
+                $("ul#images li").css("border", "solid");
+
                 //number of items to search for
                 if ( i === 15 ) {
                     return false;
@@ -59,6 +64,8 @@ $(document).on('ready', function(){
 
 
     $("button.search").on("click", function(event) {
+        //show add images button with ID hidden
+        $('#hide').show();
         // 1.   Prevent the default event execution so the browser doesn't
         //      Example: `event.preventDefault();`
         event.preventDefault();

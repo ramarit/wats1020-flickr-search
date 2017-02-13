@@ -4,14 +4,12 @@
 
 /* Enable these styles if you wish to go into a grid layout. */
 ul#images li {
-    min-width: 150px;
     width: 200px;
-    max-height: 300px;
+    height: 300px;
     display: inline-block;
     position: relative;
     float: left;
     padding: 10px;
-    border: solid;
     margin: 10px;
     overflow: auto;
 }
