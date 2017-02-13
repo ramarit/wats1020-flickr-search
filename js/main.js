@@ -49,9 +49,10 @@ $(document).on('ready', function(){
 
                 newListItem.appendTo( "#images" );
 
-                //add a border to images
-                //$("ul#images li").css("border", "solid");
-
+                //add CSS to page when search results appear
+                $("#images").css("column-count", "4");
+                $("ul#images li").css("background-color", "#eee");
+                $("ul#images li").css("box-shadow", "2px 2px 4px 0 #ccc");
                 //number of items to search for
                 if ( i === 15 ) {
                     return false;

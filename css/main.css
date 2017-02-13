@@ -3,12 +3,11 @@
    ========================================================================== */
 
 
-#images {
+/*#images {
     column-count: 4;
 }
 /* Enable these styles if you wish to go into a grid layout. */
 ul#images li {
-    background-color: #eee;
     display: inline-block;
     margin: 0 0 20px;
     width: 100%;
@@ -16,7 +15,6 @@ ul#images li {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    box-shadow: 2px 2px 4px 0 #ccc;
     transition: 1s ease;
 }
 
@@ -31,6 +29,7 @@ ul#images li button {
 }
 
 /*--- End of grid layout styles. */
+
 
 ul#images {
     list-style-type: none;
