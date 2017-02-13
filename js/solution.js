@@ -38,10 +38,13 @@ $(document).on('ready', function(){
           'type': "button"
         }).appendTo(newListItem);
         newListItem.appendTo( "#images" );
-        if ( i === 15 ) {
+        if ( i === 14 ) {
           return false;
         }
-      });
+        $(function(){
+          $('li').hide()
+          })
+        });
     });
   };
 
@@ -65,5 +68,42 @@ $(document).on('ready', function(){
     modalBody.empty();
     var modalDescription = $("<p class='image-description'>").html(imageDescription).appendTo(modalBody);
   });
+
+  
+
+
+  $('.container').each(function() {
+
+    $(this).find('li').first().siblings().hide();
+
+    $(this).find('.next').click(function () {
+      $('#li').next().hide();
+      $(this)
+        .parent('.container')
+        .find('li:first-child')
+        .fadeOut(function () {
+        $(this)
+          .parent()
+          .find('li:first-child')
+          .fadeIn()
+          $(this)
+            .appendTo($(this).parent())
+          });
+
+    });
+    $(this).find('.prev').click(function () {
+      $(this)
+        .parent('.container')
+        .find('li:first-child')
+        .fadeOut(function () {
+        $(this)
+          .parent()
+          .find('li:last-child')
+          .fadeIn()
+          .prependTo($(this).parent())
+        });
+    });
+  });
+
 
 });

@@ -2,13 +2,18 @@
    Author's custom styles
    ========================================================================== */
 
-/* Enable these styles if you wish to go into a grid layout.
+/* Enable these styles if you wish to go into a grid layout. */
 ul#images li {
-    width: 120px;
-    height: auto;
+    min-width: 150px;
+    width: 200px;
+    max-height: 300px;
     display: inline-block;
     position: relative;
     float: left;
+    padding: 10px;
+    border: solid;
+    margin: 10px;
+    overflow: auto;
 }
 
 ul#images li img {
@@ -21,7 +26,7 @@ ul#images li button {
     display: inline-block;
 }
 
---- End of grid layout styles. */
+/*--- End of grid layout styles. */
 
 ul#images {
     list-style-type: none;
@@ -42,6 +47,17 @@ ul#images .placeholder {
 hr {
     clear:both;
 }
+
+ul {
+    position:relative;
+    list-style-type:none;
+}
+
+ 
+
+
+
+
 
 
 
