@@ -6,6 +6,7 @@
 //
 // Allow users to click the images to see a larger version with more information.
 
+
 $(document).on('ready', function(){
     //hide add images button on page load with ID hide
     $('#hide').hide();
@@ -29,11 +30,14 @@ $(document).on('ready', function(){
                 // 4.   Update the display to add the images to the list with the id
                 //      `#images`.
                 var newListItem = $('<li>');
-                var newTitle = $('<p class="image-title">').html(item.title).appendTo(newListItem);
+                $( "<img>").attr("src", item.media.m).appendTo(newListItem);
+                $("<br><br>").appendTo(newListItem);
+
+                /*var newTitle = $('<p class="image-title">').html(item.title).appendTo(newListItem);
                 var newDate = $('<p class="image-date">').text(item.date_taken).appendTo(newListItem);
                 var newDescription = $('<p class="image-description">').html(item.description).appendTo(newListItem);
                 var newLink = $('<a>').attr('href', item.link).text('View on Flickr.').appendTo(newListItem);
-                
+                */
                 var newButton = $("<button class='btn btn-sm btn-primary'>enlarge</button>").attr({
                     'data-title': item.title,
                     'data-toggle': "modal",
@@ -42,10 +46,11 @@ $(document).on('ready', function(){
                     'data-description': item.description,
                     'type': "button"
                 }).appendTo(newListItem);
+
                 newListItem.appendTo( "#images" );
 
                 //add a border to images
-                $("ul#images li").css("border", "solid");
+                //$("ul#images li").css("border", "solid");
 
                 //number of items to search for
                 if ( i === 15 ) {
@@ -96,6 +101,7 @@ $(document).on('ready', function(){
 
     //add new image function
     $('.container').each(function() {
+
         //find first().siblings() and hide()
         $(this).find('li').first().siblings().hide();
 
@@ -128,6 +134,8 @@ $(document).on('ready', function(){
                 });
         });
     });
+
+
 
     // STRETCH GOAL: Add a "more info" popup using the technique shown on the
     // Bootstrap Modal documentation: http://getbootstrap.com/javascript/#modals-related-target

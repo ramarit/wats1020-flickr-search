@@ -2,16 +2,22 @@
    Author's custom styles
    ========================================================================== */
 
+
+#images {
+    column-count: 4;
+}
 /* Enable these styles if you wish to go into a grid layout. */
 ul#images li {
-    width: 200px;
-    height: 300px;
+    background-color: #eee;
     display: inline-block;
-    position: relative;
-    float: left;
-    padding: 10px;
-    margin: 10px;
-    overflow: auto;
+    margin: 0 0 20px;
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: 2px 2px 4px 0 #ccc;
+    transition: 1s ease;
 }
 
 ul#images li img {
